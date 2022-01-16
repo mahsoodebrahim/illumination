@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { Navbar, Sidebar, Footer } from "./components";
 import {
   About,
   CartPage,
@@ -14,6 +15,8 @@ import {
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,6 +26,7 @@ function App() {
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
