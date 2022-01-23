@@ -64,8 +64,8 @@ const NavContainer = styled.nav`
   }
 
   .nav-toggle {
-    border: 2px solid green;
     background: transparent;
+    border: transparent;
     color: var(--clr-primary-5);
     cursor: pointer;
     svg {
@@ -74,6 +74,10 @@ const NavContainer = styled.nav`
   }
 
   .nav-links {
+    display: none;
+  }
+
+  .cart-btn-wrapper {
     display: none;
   }
 
@@ -89,8 +93,8 @@ const NavContainer = styled.nav`
 
     .nav-links {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
 
       li {
         margin: 0 0.5rem;
@@ -106,6 +110,10 @@ const NavContainer = styled.nav`
           border-bottom: 2px solid var(--clr-primary-7);
         }
       }
+    }
+
+    .cart-btn-wrapper {
+      display: grid;
     }
   }
 `;
